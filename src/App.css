@@ -9,6 +9,12 @@
   font-size: 0.9rem;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.app img {
+  max-width: 100%;
 }
 
 .app > * {
