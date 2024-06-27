@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Background from './ui/Background/Background';
+import Header from './ui/Header/Header';
+import Section1 from './ui/Section1/Section1';
+import Section2 from './ui/Section2/Section2';
+import Section3 from './ui/Section3/Section3';
+import Section4 from './ui/Section4/Section4';
+import Divider from './components/Divider/Divider';
+import Footer from './ui/Footer/Footer';
 
 function App() {
+  const header1 = ['About us', 'Registration', 'Careers']
+  const header2 = ['FAQs', 'Privacy Policy', 'Other']
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Background></Background>
+      <Header data={header1}></Header>
+      <Section1></Section1>
+      <Section2></Section2>
+      <Section3></Section3>
+      <Section4></Section4>
+      <Divider></Divider>
+      <Header data={header2} style={{ marginBottom: '0px' }}></Header>
+      <Footer></Footer>
     </div>
   );
 }

@@ -1,0 +1,52 @@
+.registration.card {
+  padding: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.registration .button {
+  margin: 20px;
+}
+
+.form {
+  width: 100%;
+}
+
+.form .control {
+  margin: 20px;
+}
+
+.form p {
+  color: red;
+}
+
+.control label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.control label span {
+  color: red;
+  font-size: 1rem;
+}
+
+.control input {
+  width: calc(100% - 32px);
+  outline: none;
+  margin-top: 5px;
+  padding: 0px 16px;
+  gap: 10px;
+
+  height: 51px;
+
+  background: #f9faff;
+  border: 1px solid #dee6ff;
+  border-radius: 5px;
+}
+
+.control .error {
+  margin: 5px auto;
+}

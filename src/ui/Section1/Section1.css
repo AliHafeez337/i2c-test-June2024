@@ -1,0 +1,23 @@
+.app-section1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.app-section1 > * {
+  justify-self: center;
+}
+
+.section1-img {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+@media screen and (max-width: 1000px) {
+  .app-section1 {
+    grid-template-columns: 100%;
+  }
+}
+
+
+
