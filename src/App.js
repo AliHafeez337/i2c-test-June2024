@@ -1,5 +1,5 @@
 
-import './App.module.css';
+import './App.css';
 import Background from './ui/Background/Background';
 import Header from './ui/Header/Header';
 import Section1 from './ui/Section1/Section1';
