@@ -2,7 +2,7 @@ import './Header.css';
 import logo from '../../assets/logo.svg';
 import Button from '../../components/Button/Button'
 
-function Header({data, style}) {
+function Header({ data = [], style }) {
 
   return (
     <header className='app-header' style={style}>

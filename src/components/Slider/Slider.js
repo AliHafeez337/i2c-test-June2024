@@ -4,7 +4,7 @@ import arrowRight from '../../assets/arrowRight.svg';
 import { useMemo, useState } from 'react';
 import Button from '../Button/Button';
 
-function Slider({ data }) {
+function Slider({ data = [] }) {
   const [startIdx, setStartIdx] = useState(0);
 
   const arrangedData = useMemo(
