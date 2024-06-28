@@ -25,6 +25,7 @@ function Regsitration() {
   const [emailErr, setEmailErr] = useState(false);
   const [invalidErr, setInvalidErr] = useState(false);
   const [err, setErr] = useState(false);
+  const [registered, setRegistered] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -34,6 +35,8 @@ function Regsitration() {
   const handleSubmit = (event) => {
     event.preventDefault();
     event.stopPropagation();
+
+    setRegistered(false);
 
     if (!formData.name) {
       setNameErr(true);
@@ -60,8 +63,10 @@ function Regsitration() {
     }
 
     setErr(false);
-    console.log([...emails, formData.email])
+    
     localStorage.setItem("emails", JSON.stringify([...emails, formData.email]));
+
+    setRegistered(true);
   }
 
   return (
@@ -88,6 +93,7 @@ function Regsitration() {
           {invalidErr && <p className='error'>Email is invalid</p>}
         </div>
         {err && <p className='error'>Already registered!</p>}
+        {registered && <p className='success'>Registered!</p>}
         <Button type="submit">Submit</Button>
       </form>
     </Card>
