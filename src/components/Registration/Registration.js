@@ -56,7 +56,7 @@ function Regsitration() {
     setInvalidErr(false);
 
     const emails = JSON.parse(localStorage.getItem("emails") || "[]");
-    console.log(emails)
+
     if (emails.find(a => a === formData.email)) {
       setErr(true);
       return;
@@ -83,7 +83,7 @@ function Regsitration() {
           {nameErr && <p className='error'>Name is required</p>}
         </div>
         <div className='control'>
-          <label htmlFor="comapny">Company</label>
+          <label htmlFor="company">Company</label>
           <input type="text" id="company" name="company" value={formData.company} onChange={handleChange} placeholder='Enter your company name'/>
         </div>
         <div className='control'>
